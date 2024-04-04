@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>前端課程</h1>
+    <ul>
+        <li id="html" class="subjects">HTML</li>
+        <li id="css" class="subjects">CSS</li>
+        <li id="js" class="subjects">JavaScript</li>
+    </ul>
+    <script>
+        // 取得subjects類別
+        let subjects = document.getElementsByClassName("subjects");
+        // let subjects = document.querySelectorAll(".subjects");
+        // console.log(subjects.length);
+        for (let i = 0; i < subjects.length; i++) {
+            // 下列方法擇其一寫
+            console.log(subjects.item(i).textContent);
+            console.log(subjects[i].textContent);
+        }
+    </script>
+</body>
+
+</html>

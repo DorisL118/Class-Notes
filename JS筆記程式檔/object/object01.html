@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 建立物件
+        // 方法一：實字方式建立物件
+        var user = {
+            name: 'demo1',
+            age: 20,
+            height: 157,
+            weight: 50,
+            showMsg: function () {
+                //this識別字：指的是物件自己本身
+                window.alert('Hi, 我是' + this.name);   
+            }
+        }
+        // 使用物件
+        // 呼叫屬性 => 物件名稱.屬性名稱
+        console.log(user.name);        
+
+        // 呼叫屬性 => 物件名稱["物件屬性"]
+        console.log(user["age"]);
+
+        // 呼叫方法 => 物件名稱.方法名稱()
+        // user.showMsg();
+        
+        // 更改年齡屬性
+        user.age = 30;
+        console.log(user.age);
+
+        // 刪除物件的屬性
+        delete user.age;
+        console.log(user.age);
+
+        
+
+
+    </script>
+</body>
+
+</html>

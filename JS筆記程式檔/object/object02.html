@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 建立物件方法2
+        // 建構子方式：使用new關鍵字建立一個空物件後，再加入屬性與方法
+        // 建立一個空的物件
+        var user = new Object();
+        // 加入屬性
+        user.name="demo2";
+        user.age=20;
+        // 加入方法
+        user.showMsg = function(){
+            console.log(`Hi, 我是${this.name}!`);
+        }
+        // 查看物件的成員（屬性、方法）        
+        console.log(user);
+
+        // 呼叫物件屬性與方法
+        console.log(user.name);
+        console.log(user.age);
+        user.showMsg();
+
+
+    </script>
+</body>
+
+</html>

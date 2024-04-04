@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a id="url">GOOGLE</a>
+    <button type="button" id="btn">增加href屬性</button>
+    <button type="button" id="btn2">移除href屬性</button>
+    <script>
+        // 取得id是url
+        let url = document.querySelector("#url");
+
+        let attr;
+        // 檢查href屬性是否存在
+        if (url.hasAttribute("href")) {
+            // 取得超連結中的href屬性的內容
+            attr = url.getAttribute("href");
+            console.log(attr);
+        }
+        // 取得按鈕
+        let btn = document.querySelector("#btn");
+        btn.addEventListener("click", function () {
+            // 更改屬性值
+            url.setAttribute("href", "https://www.google.com/");
+            console.log(url.getAttribute("href"));
+        });
+        // 取得按鈕2
+        let btn2 = document.querySelector("#btn2");
+        btn2.addEventListener("click", function () {
+            // 移除屬性
+            url.removeAttribute("href");
+            console.log(url.getAttribute("href"));
+        });
+    </script>
+</body>
+
+</html>

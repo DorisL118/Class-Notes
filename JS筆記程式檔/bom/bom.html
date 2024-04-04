@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a href="javascript:openNewWindow();">開新視窗</a>
+    <a href="javascript:closeNewWindow();">關閉視窗</a>
+    <script>
+        // 瀏覽器物件模型
+        // BOM => Browser Object Model
+        // Window物件
+        // 訊息視窗
+        // window.alert("alert");
+        // 輸入視窗
+        // window.prompt("我是輸入視窗","60");
+        // 開視窗 => 寬：400像素, 高200像素
+        let myWin = null;
+        function openNewWindow() {
+            myWin = window.open('new.html', 'myWin', 'height=200,width=400');
+        }
+
+        // 關閉視窗
+        function closeNewWindow() {
+            if (myWin) {
+                myWin.close();
+            }
+        }
+    </script>
+</body>
+
+</html>

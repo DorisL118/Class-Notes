@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        請選擇喜歡飲料：
+        <input type="checkbox" name="drinks" value="美式">美式
+        <input type="checkbox" name="drinks" value="拿鐵">拿鐵
+        <input type="checkbox" name="drinks" value="紅茶">紅茶
+    </form>
+    <script>
+        // 使用name屬性，取得drinks的元素
+        let drinks = document.getElementsByName("drinks");
+        // 使用迴圈搭配length與item(index)取得value值
+        for (let i = 0; i < drinks.length; i++) {
+            // 下列二個方法都可以取drinks的value值
+            console.log(drinks.item(i).value);
+            console.log(drinks[i].value);
+        }        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ul>
+    <button type="button" id="btn">新增清單</button>
+    <button type="button" id="btn2">移除清單</button>
+    <script>
+        let btn = document.getElementById("btn");
+        // 新增清單
+        btn.addEventListener('click', function () {
+            let strInput = prompt("請輸入待辦事項");
+
+            // 1. 建立新節點 => createElement()
+            let newElm = document.createElement("li");
+            // 2. 建立文字節點 => createTextNode()
+            let newText = document.createTextNode(strInput);
+            // 3. 將文字節點加入到新節點 => appendChild()
+            newElm.appendChild(newText);
+            // 取得要加入新節點的位置
+            let position = document.getElementsByTagName("ul")[0];
+            // 將新節點加入到ul元素的最後一個子節點
+            position.appendChild(newElm);
+        });
+        // 移除清單
+        btn2.addEventListener('click', () => {
+            // 移除第一個清單
+            let removeElm = document.getElementsByTagName("li")[0];
+            // 找到父元素節點
+            let parentElm = removeElm.parentNode;
+            // 從父元素移除指定的子節點
+            parentElm.removeChild(removeElm);
+        })
+    </script>
+</body>
+
+</html>

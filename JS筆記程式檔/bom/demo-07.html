@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="subjects">
+        <li id="html">HTML</li>
+        <li id="css">CSS</li>
+        <li id="js">JavaScript</li>
+    </ul>
+    <script>
+        let item = document.querySelector("#js");
+        // console.log(item.textContent);
+        document.write(item.textContent + "<br>");
+
+
+        let item2 = document.querySelector("#subjects");
+        // console.log(item2.textContent);
+        document.write(item2.textContent);
+    </script>
+    <hr>
+
+    <!-- 使用輸入視窗，將結果顯示在下方段落中 -->
+    <p id="msg"></p>
+    <button type="button" id="btn" onclick="showMsg();">輸入任意字</button>
+    <button type="button" id="btn2">輸入任意字2</button>
+    <button type="button" id="btn3">輸入任意字3</button>
+
+    <script>
+        function showMsg() {
+            let strMsg = prompt("請輸入任意字");
+            let msg = document.querySelector("#msg");
+            msg.textContent = "您輸入的內容為：" + strMsg;
+        }
+
+        // 取得按鈕2
+        let btn2 = document.getElementById("btn2");
+        // 監聽按鈕2的click事件
+        // 匿名函式
+        btn2.addEventListener("click", function () {
+            let strMsg = prompt("請輸入任意字");
+            let msg = document.querySelector("#msg");
+            msg.textContent = "您輸入的內容為：" + strMsg;
+        });
+        // 箭頭函式
+        btn3.addEventListener("click", () => {
+            let strMsg = prompt("請輸入任意字");
+            let msg = document.querySelector("#msg");
+            msg.textContent = "您輸入的內容為：" + strMsg;
+        });
+    </script>
+</body>
+
+</html>

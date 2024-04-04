@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1">
+        <style>
+            #span1 {text-transform: uppercase;}
+        </style>
+        <span id="span1">Hello, JavaScript</span>
+        <span style="display: none;">我是看不見的內容</span>
+    </p>
+    <h3>使用textContent屬性的結果</h3>
+    <textarea id="textContentOutput" rows="8" cols="70"></textarea>
+    <h3>使用innerText屬性的結果</h3>
+    <textarea id="innerTextOutput" rows="8" cols="70"></textarea>
+    <script>
+        let p1 = document.getElementById("p1");
+        let textContentOutput = document.getElementById("textContentOutput");
+        let innerTextOutput = document.getElementById("innerTextOutput");
+        textContentOutput.value = p1.textContent;
+        innerTextOutput.value = p1.innerText;        
+    </script>
+</body>
+
+</html>

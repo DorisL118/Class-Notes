@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>HTML</li>
+    </ul>
+
+    <!-- 
+        新增「有文字節點」步驟
+        1. 建立新節點 => createElement()
+        2. 建立文字節點 => createTextNode()
+        3. 將文字節點加入到新節點 => appendChild()
+        4. 新增節點到指定的DOM元素中 => appendChild()
+    -->
+    <script>
+        // 1. 建立新節點 => createElement()
+        let newElm = document.createElement("li");
+        // 2. 建立文字節點 => createTextNode()
+        let newText = document.createTextNode("CSS");
+        // 3. 將文字節點加入到新節點 => appendChild()
+        newElm.appendChild(newText);
+        // 取得要加入新節點的位置
+        let position = document.getElementsByTagName("ul")[0];
+        // 將新節點加入到ul元素的最後一個子節點
+        position.appendChild(newElm);
+    </script>
+</body>
+
+</html>

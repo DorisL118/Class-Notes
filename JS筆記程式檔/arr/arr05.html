@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>亂數:0-1之間的數字-Math.random()</h1>
+    <script>
+        // 取亂數
+        // let n1 = Math.random();
+        // console.log(n1);
+        // 無條件捨去
+        // n1 = Math.floor(n1);
+        // console.log(n1);
+        // 產生亂數1-5
+        // let n2 = Math.floor(Math.random() * 5) + 1; //0,1,2,3,4->1,2,3,4,5
+        // console.log(n2);
+
+        // 產生大樂透號碼1-49
+        // 使用亂數產生6個號碼，不能重覆
+        // indexOf(item)=>尋找陣列中指定的元素，回傳第一次被找到的位置，-1表示找不到
+        // includes(item)=>是否有找到指定的元素，回傳true或false        
+
+        let arrNum = [];    //存放號碼的陣列
+        for (let i = 0; i < 6; i++) {
+            // 取得亂數號碼
+            let lotNum = Math.floor(Math.random() * 49) + 1;
+            // 檢查陣列中是否有目前的亂數值
+            if (arrNum.indexOf(lotNum) == -1) {
+                // 沒有重覆
+                // 使用編號位置，加入陣列值
+                // arrNum[i] = lotNum;
+                // push()=>新增元素到陣列最後面
+                arrNum.push(lotNum);
+            } else {
+                // 重覆
+                console.log(`在編號${i}位置, ${lotNum}重覆了`);
+                i = i - 1;
+            }
+        }
+        console.log(`排序前：${arrNum}`);
+        arrNum.sort((a, b) => {
+            return a - b;
+        });
+        // console.log(`排序後：${arrNum}`);
+        console.log(`第一區：${arrNum}`);
+
+        // 第二區號碼
+        let lotNum2 = Math.floor(Math.random() * 49) + 1;
+        console.log(`第二區：${lotNum2}`);
+    </script>
+</body>
+
+</html>

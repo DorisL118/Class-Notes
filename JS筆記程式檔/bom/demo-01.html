@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>前端課程
+        <small>
+            <span id="entryTime"></span>
+        </small>
+    </h1>
+
+    <ul>
+        <li id="html">HTML</li>
+        <li id="css">CSS</li>
+        <li id="js">JavaScript</li>
+    </ul>
+    <script>
+        // 取得顯示進入時間點的位置
+        // let entryTime=document.getElementById("entryTime");
+        let entryTime = document.querySelector("#entryTime");
+        // 寫入進入的時間點
+        entryTime.textContent = new Date().toLocaleString();
+    </script>
+</body>
+
+</html>

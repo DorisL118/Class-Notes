@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 物件樣板：（類似元件設計）
+        // 建立一個名稱為User函式做為物件的樣板
+        // 內有name與age二個屬性，showMsg()方法
+
+        function User(strName, strAge) {
+            this.name = strName;
+            this.age = strAge;
+            this.showMsg = function () {
+                console.log(`Hi, 我是${this.name}`);
+            }
+        }
+        // 呼叫物件樣版，必須使用new關鍵字
+        var user1 = new User("張三",20);
+        console.log(user1);
+        // console.log(user1.age);
+        // console.log(user1.name);
+        // user1.showMsg();
+
+        var user2 = new User("李四",30);
+        console.log(user2);
+
+
+
+    </script>
+</body>
+
+</html>

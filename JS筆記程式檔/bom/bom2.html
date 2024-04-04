@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="clock"></div>
+    <button type="button" id="btn">停止</button>
+    <script>
+        // 監聽事件
+        window.addEventListener('load', function () {
+            // setInterval => 每隔一段時間，做某些事
+            // 秒數 => 1秒 = 1000毫秒
+            var timer = window.setInterval(function () {
+                var clock = document.getElementById("clock");
+                clock.textContent = new Date().toLocaleString();
+            }, 1000);
+
+            // 停止
+            var btn = document.getElementById('btn');
+            btn.addEventListener('click', function () {
+                window.clearInterval(timer);
+            });
+        });        
+    </script>
+</body>
+
+</html>
